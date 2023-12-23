@@ -1,7 +1,8 @@
 import { auth } from '@/utils/authentication/firebase'
 import {
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  signOut
 } from 'firebase/auth'
 
 
@@ -12,8 +13,27 @@ export const signInWithGoogle = async () => {
     const { user } = await signInWithPopup(auth, googleProvider)
     return user
   } catch (error) {
-    // const { code, message } = error
-    // console.log('error on authentiation', error)
-    // return { code, message }
+    console.log('error on authentiation', error)
   }
 }
+
+export const getCurrentUser = async () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        unsubscribe()
+        resolve(userAuth)
+      } else {
+        unsubscribe()
+        resolve(null)
+      }
+    }, reject)
+  })
+}
+
+export const logout = async () => {
+  if (auth.currentUser) {
+    await signOut(auth)
+  }
+}
+

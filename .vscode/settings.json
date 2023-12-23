@@ -1,0 +1,22 @@
+{
+  // Formatting and linting
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports", // VSCode
+    "source.organizeImports", // VSCode
+    "source.formatDocument", // Extension: Format Code Action
+    "source.fixAll.eslint" // Extension: ESLint
+  ],
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true, // Enabled via codeActionsOnSave (known order)
+  "editor.formatOnPaste": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.semi": false,
+  "javascript.format.semicolons": "remove",
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "prettier.trailingComma": "es5",
+  "typescript.preferences.importModuleSpecifier": "non-relative"
+}

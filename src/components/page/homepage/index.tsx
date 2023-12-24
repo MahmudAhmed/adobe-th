@@ -8,8 +8,8 @@ function Homepage({ images }: { images: ImageItem[] }) {
   const [userId, setUserId] = useState("")
   useEffect(() => {
     getCurrentUser().then(
-      (res) => {
-        res && setUserId(res.uid)
+      (res: any) => {
+        res && setUserId(res?.uid)
       }
     )
   }, [])

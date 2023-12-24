@@ -5,7 +5,7 @@ export const HomepageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   max-width: 900px;
   margin: auto;
   

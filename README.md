@@ -12,7 +12,14 @@ NEXT_PUBLIC_STORAGE_BUCKET=
 NEXT_PUBLIC_MESSAGING_ID=
 NEXT_PUBLIC_APP_ID=
 
+Next, install dep: 
 
+```
+npm install
+# or
+yarn insall
+
+```
 Then, run the development server:
 
 ```bash
@@ -61,6 +68,16 @@ useEffect(() => {
 - Add Navigation on Modal View & Likes/Dislike from the Modal. 
 
 
-## Docker Container Coming Soon...
+## Docker
 
+
+```
+docker pull mahmudahmed/adobe-th
+```
+
+To run: 
+
+```
+docker run -p 3000:3000 -e NEXT_PUBLIC_API_KEY=[API_KEY] mahmudahmed/adobe-th
+```
 

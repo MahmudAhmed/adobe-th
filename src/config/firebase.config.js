@@ -3,8 +3,8 @@ const firebaseConfig = {
   authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
   projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
   storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
-  // messagingSend: process.env.NEXT_PUBLIC_MESSAGING_ID,
-  // appId: process.env.NEXT_PUBLIC_APP_ID,
+  messagingSend: process.env.NEXT_PUBLIC_MESSAGING_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 }
 
 export default firebaseConfig
